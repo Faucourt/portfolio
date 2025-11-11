@@ -1,0 +1,53 @@
+/* ==========================================
+   BOUTONS — Actions principales
+   ========================================== */
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  font-family: var(--font-main);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+}
+
+/* Primaire — principal */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+.btn-primary:hover {
+  background-color: var(--color-secondary);
+}
+
+/* Secondaire — contrasté chaud */
+.btn-secondary {
+  background-color: var(--color-warm);
+  color: var(--color-light);
+}
+.btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+/* Clair — sur fond sombre */
+.btn-light {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+.btn-light:hover {
+  background-color: var(--color-accent);
+}
+
+/* Lien — minimal */
+.btn-text {
+  background: none;
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.btn-text:hover {
+  color: var(--color-warm);
+}

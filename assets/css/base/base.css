@@ -1,0 +1,33 @@
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-alt);
+  font-size: 1rem;
+  min-height: 100vh;
+  transition: var(--transition);
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+a:hover {
+  color: var(--color-warm);
+}
+
+/* Listes */
+ul {
+  padding-left: 1rem;
+}
+
+/* Liens accentués */
+a.accent {
+  color: var(--color-accent);
+  font-weight: 600;
+}

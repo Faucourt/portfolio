@@ -1,0 +1,29 @@
+:root {
+  /* --- Couleurs principales --- */
+  --color-primary: #18534F;     /* Vert profond — Identité principale */
+  --color-secondary: #226D68;   /* Vert moyen — Hover / accent */
+  --color-light: #ECF8F6;       /* Blanc cassé — fond clair */
+  --color-accent: #FEEAA1;      /* Jaune doux — surlignage */
+  --color-warm: #D6955B;        /* Orange brun — contraste chaud */
+
+  /* --- Couleurs de texte --- */
+  --text-primary: #18534F;
+  --text-secondary: #226D68;
+  --text-light: #ECF8F6;
+
+  /* --- Fonds --- */
+  --bg-primary: #ECF8F6;
+  --bg-secondary: #FEEAA1;
+
+  /* --- Bordures & ombres --- */
+  --border-color: rgba(0, 0, 0, 0.1);
+  --shadow-color: rgba(24, 83, 79, 0.15);
+
+  /* --- Typographies --- */
+  --font-main: "Poppins", sans-serif;
+  --font-alt: "Open Sans", sans-serif;
+
+  /* --- Espacements & transitions --- */
+  --radius: 8px;
+  --transition: all 0.3s ease;
+}

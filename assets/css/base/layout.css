@@ -1,0 +1,121 @@
+/* === STRUCTURE GÉNÉRALE === */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 2rem 1rem;
+  background-color: var(--bg-primary);
+}
+
+/* === HEADER === */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-light);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.logo img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-primary);
+}
+.logo h1 {
+  font-size: 1.2rem;
+  font-family: var(--font-main);
+  color: var(--color-primary);
+}
+
+/* === NAVIGATION === */
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  list-style: none;
+}
+.nav-link {
+  font-family: var(--font-alt);
+  color: var(--color-primary);
+  font-weight: 500;
+  position: relative;
+  transition: var(--transition);
+}
+.nav-link:hover {
+  color: var(--color-secondary);
+}
+
+/* Barre animée sous le lien */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+.nav-link.active {
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+/* === FOOTER === */
+.site-footer {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+.site-footer .socials a {
+  margin: 0 0.5rem;
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+.site-footer .socials a:hover {
+  color: var(--color-secondary);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .navbar ul {
+    gap: 0.8rem;
+  }
+  .logo h1 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

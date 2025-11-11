@@ -1,0 +1,30 @@
+/* ==========================================
+   MEDIA — Images & icônes
+   ========================================== */
+
+/* Images globales */
+img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+/* Avatar rond */
+.img-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-primary);
+}
+
+/* Icônes SVG */
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-primary);
+  transition: var(--transition);
+}
+.icon:hover {
+  fill: var(--color-warm);
+}

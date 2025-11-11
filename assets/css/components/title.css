@@ -1,0 +1,36 @@
+<<<<<<< HEAD
+=======
+/* ==========================================
+   TITRES — Hiérarchie et style
+   ========================================== */
+
+.title-main {
+  font-family: var(--font-main);
+  font-size: 2.4rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.title-section {
+  font-family: var(--font-main);
+  font-size: 2rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.title-sub {
+  font-family: var(--font-alt);
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.title-mini {
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+>>>>>>> 0fd857b (Sauvegarde)

@@ -1,0 +1,129 @@
+/* PAGE PROJETS */
+.projets-section {
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* HEADER DU PROJET*/
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}
+
+.project-img {
+    width: 120px;
+    height: 120px;
+    border-radius: var(--radius);
+    object-fit: cover;
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+/* DETAILS / TOGGLE */
+
+.project-toggle {
+    margin-top: 1rem;
+}
+
+.project-details {
+    margin-top: 1rem;
+    border-top: 2px solid var(--color-accent);
+    padding-top: 1rem;
+}
+
+.project-details[hidden] {
+    display: none;
+}
+
+.details-section {
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius);
+    margin-bottom: 0.8rem;
+    overflow: hidden;
+}
+
+/* Header interne */
+.details-header {
+    width: 100%;
+    background: var(--color-light);
+    padding: 0.85rem 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition);
+    border: none;
+}
+
+.details-header:hover {
+    background: var(--color-accent);
+}
+
+.details-content {
+    background: var(--bg-primary);
+    padding: 1rem;
+    text-align: left;
+}
+
+.details-content[hidden] {
+    display: none;
+}
+
+/* TECHNOLOGIES GRID */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.tech-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.tech-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background: var(--color-light);
+    padding: 0.4rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 6px var(--shadow-color);
+}
+
+.tech-item span {
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.version-list {
+    padding-left: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.version-list li {
+    margin-bottom: 0.4rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+
+/* Desktop amélioré */
+@media (min-width: 900px) {
+    .tech-grid {
+        gap: 1.6rem;
+    }
+}

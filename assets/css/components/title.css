@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-/* ==========================================
-   TITRES — Hiérarchie et style
-   ========================================== */
+/* TITLES – Hiérarchie des titres*/
 
 .title-main {
   font-family: var(--font-main);
@@ -33,4 +29,14 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
->>>>>>> 0fd857b (Sauvegarde)
+
+/* Alignements utiles */
+.title-center { text-align: center; }
+.title-left { text-align: left; }
+
+/* Mobile-first */
+@media (max-width: 600px) {
+  .title-main { font-size: 1.9rem; }
+  .title-section { font-size: 1.6rem; }
+  .title-sub { font-size: 1.2rem; }
+}

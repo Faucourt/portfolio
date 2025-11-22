@@ -1,4 +1,7 @@
-/* === STRUCTURE GÉNÉRALE === */
+/* LAYOUT – Structure globale du site
+   Header, main, footer, responsive*/
+
+/* Structure principale */
 body {
   display: flex;
   flex-direction: column;
@@ -8,13 +11,16 @@ main {
   flex: 1;
   padding: 2rem 1rem;
   background-color: var(--bg-primary);
+  max-width: var(--container-width);
+  width: 100%;
+  margin: 0 auto;
 }
 
-/* === HEADER === */
+/* HEADER*/
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: var(--z-header);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,6 +31,7 @@ main {
   transition: var(--transition);
 }
 
+/* Logo gauche */
 .logo {
   display: flex;
   align-items: center;
@@ -43,13 +50,13 @@ main {
   color: var(--color-primary);
 }
 
-/* === NAVIGATION === */
+/* NAVIGATION */
 .navbar ul {
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  list-style: none;
 }
+
 .nav-link {
   font-family: var(--font-alt);
   color: var(--color-primary);
@@ -57,11 +64,12 @@ main {
   position: relative;
   transition: var(--transition);
 }
+
 .nav-link:hover {
   color: var(--color-secondary);
 }
 
-/* Barre animée sous le lien */
+/* Ligne active sous les liens */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -81,7 +89,7 @@ main {
   color: var(--color-secondary);
 }
 
-/* === FOOTER === */
+/* FOOTER */
 .site-footer {
   background-color: var(--color-light);
   color: var(--color-primary);
@@ -90,6 +98,7 @@ main {
   border-top: 1px solid var(--border-color);
   font-size: 0.9rem;
 }
+
 .site-footer .socials a {
   margin: 0 0.5rem;
   color: var(--color-primary);
@@ -99,7 +108,8 @@ main {
   color: var(--color-secondary);
 }
 
-/* === RESPONSIVE === */
+/* RESPONSIVE */
+
 @media (max-width: 900px) {
   .navbar ul {
     gap: 0.8rem;
@@ -113,9 +123,12 @@ main {
   .site-header {
     flex-direction: column;
     gap: 0.6rem;
+    padding: 1rem;
   }
+
   .navbar ul {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0.6rem;
   }
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Centres d’intérêts — Portfolio</title>
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="./interets.css" />
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+
+    <!-- Swipe utility -->
+    <script src="/backend/swipe.js" defer></script>
+
+    <!-- JS page -->
+    <script src="./interets.js" defer></script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <main class="interets-page">
+
+        <section class="section-content">
+            <h1 class="title-main">Centres d’intérêts</h1>
+            <p class="subtitle">Voyages, sports et activités créatives.</p>
+        </section>
+
+        <!-- VOYAGES -->
+        <section class="voyages-section">
+            <div class="section-content">
+                <h2 class="title-secondary">Voyages & Découvertes</h2>
+                <p class="subtitle">Les différents lieux que j’ai visités au fil des années.</p>
+
+                <div class="voyages-layout">
+
+                    <!-- -------- SIDEBAR -------- -->
+                    <aside class="travel-sidebar">
+                        <h3 class="sidebar-title">Lieux visités</h3>
+
+                        <!-- Filtrage par pays -->
+                        <select id="filterCountries" aria-label="Filtrer par pays" class="country-filter">
+                            <option value="all">Tous les pays</option>
+                        </select>
+
+                        <ul id="travelList" class="travel-list"></ul>
+                    </aside>
+
+                    <!-- -------- MAP -------- -->
+                    <div id="map" class="worldmap" aria-label="Carte interactive"></div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SPORTS -->
+        <section class="sports-section">
+            <div class="section-content">
+                <h2 class="title-secondary">Sports & Activités</h2>
+                <p class="subtitle">Ce que je pratique et ce qui me passionne.</p>
+
+                <div class="sports-grid" id="sportsContainer"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="/backend/debug.js"></script>
+    <script src="/backend/userConfig.js"></script>
+    <script src="/backend/header.js"></script>
+    <script src="/backend/footer.js"></script>
+    <script src="/backend/navigation.js"></script>
+
+</body>
+
+</html>

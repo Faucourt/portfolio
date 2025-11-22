@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compétences – Portfolio</title>
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <!-- CSS spécifique -->
+  <link rel="stylesheet" href="./competences.css" />
+</head>
+
+<body>
+
+  <!-- HEADER dynamique -->
+  <div id="header"></div>
+
+  <main>
+    <section class="section-light competences-section">
+      <div class="section-content">
+        <h1 class="title-main">Mes compétences</h1>
+        <p class="subtitle">
+          Deux axes principaux : <strong>Hard Skills</strong> et <strong>Soft Skills</strong>.
+          Tout est chargé dynamiquement.
+        </p>
+
+        <!-- Conteneur dynamique -->
+        <div id="competences-container" class="competences-groups"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER dynamique -->
+  <div id="footer"></div>
+
+  <!-- Backend -->
+  <script src="/backend/debug.js"></script>
+  <script src="/backend/userConfig.js"></script>
+  <script src="/backend/header.js"></script>
+  <script src="/backend/footer.js"></script>
+  <script src="/backend/navigation.js"></script>
+
+  <!-- Script dynamique -->
+  <script type="module" src="./competences.js"></script>
+
+</body>
+
+</html>

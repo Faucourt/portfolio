@@ -31,3 +31,33 @@ a.accent {
   color: var(--color-accent);
   font-weight: 600;
 }
+
+/* BARRE DE SCROLL UNIVERSELLE (évite les décalages)*/
+html {
+  overflow-y: scroll;
+}
+
+/* STYLISATION SCROLLBAR — CHROMIUM (Chrome / Edge)*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary); /* #ECF8F6 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary); /* #18534F */
+  border-radius: 10px;
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary); /* #226D68 */
+}
+
+/* STYLISATION SCROLLBAR — FIREFOX */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--bg-primary);
+}

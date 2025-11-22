@@ -1,11 +1,14 @@
-/* === Fondations === */
+/* MAIN.CSS
+   Point d'entrée principal des styles
+   Charge : bases → composants → utilitaires*/
+
+/* ===== 1. Fondations (dans l’ordre vital) ===== */
 @import url('./base/reset.css');
 @import url('./base/variables.css');
 @import url('./base/base.css');
 @import url('./base/layout.css');
-@import url('./base/darkmode.css');
 
-/* === Composants === */
+/* ===== 2. Composants réutilisables ===== */
 @import url('./components/button.css');
 @import url('./components/title.css');
 @import url('./components/card.css');

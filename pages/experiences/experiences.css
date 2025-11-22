@@ -1,0 +1,143 @@
+/* PAGE EXPERIENCES */
+
+.experiences-page {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* LISTE DES CARTES */
+.xp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* ESPACEMENT GLOBAL & DYNAMIQUE */
+}
+
+/* CARDS */
+.xp-card {
+  padding: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity .6s ease,
+    transform .6s ease,
+    box-shadow .25s ease;
+}
+
+@media (min-width: 820px) {
+  .xp-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px var(--shadow-color);
+  }
+}
+
+/* HEADER */
+.xp-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+  .xp-header {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.xp-role {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+}
+
+.xp-company {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* INFOS */
+.xp-info {
+  text-align: left;
+}
+
+@media (min-width: 600px) {
+  .xp-info {
+    text-align: right;
+  }
+}
+
+.xp-date {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* BADGES CONTEXTES */
+.xp-context {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.xp-context--stage {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.xp-context--alternance {
+  background: var(--color-warm);
+  color: var(--color-light);
+}
+
+.xp-context--freelance {
+  background: var(--color-secondary);
+  color: var(--color-light);
+}
+
+.xp-context--default {
+  background: var(--color-light);
+  color: var(--color-primary);
+}
+
+/* DESCRIPTION & MISSIONS */
+.xp-description {
+  margin-bottom: 0.8rem;
+  color: var(--text-primary);
+}
+
+.xp-missions {
+  margin: 0 0 1rem 1.2rem;
+  padding: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.xp-missions li {
+  margin-bottom: 0.3rem;
+}
+
+/* TECH BADGES */
+.xp-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.xp-tech {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  border: 1px solid rgba(24, 83, 79, 0.25);
+}
+.xp-tech:hover {
+  background: var(--color-primary);
+  color: var(--color-light);
+  cursor: default;
+}

@@ -1,0 +1,94 @@
+/* SECTION PARCOURS — Mobile First */
+.parcours-section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* MOBILE : 1 colonne */
+.parcours-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  justify-items: center;
+}
+
+/* CARD FLIP BASE */
+.card--flip {
+  width: 100%;
+  max-width: 320px;
+  perspective: 1000px;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+
+.card--flip.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-inner {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* FLIP */
+.card--flip.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT & BACK */
+.card-face {
+  position: absolute;
+  inset: 0;
+  padding: 1.3rem;
+  border-radius: var(--radius);
+  background: var(--color-light);
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* TEXT */
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: .4rem;
+  color: var(--color-primary);
+}
+
+.card-text {
+  font-size: .95rem;
+  line-height: 1.55;
+}
+
+
+/* RESPONSIVE GRID */
+/* Tablette : 2 colonnes */
+@media (min-width: 600px) {
+  .parcours-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop : EXACTEMENT 4 colonnes */
+@media (min-width: 1024px) {
+  .parcours-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card--flip {
+    max-width: 100%; /* Les cartes remplissent chaque colonne */
+  }
+}

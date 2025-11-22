@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Expériences professionnelles – Portfolio</title>
+
+    <!-- CSS global -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <!-- CSS spécifique -->
+    <link rel="stylesheet" href="./experiences.css" />
+</head>
+
+<body>
+
+    <!-- HEADER dynamique -->
+    <div id="header"></div>
+
+    <main class="experiences-page">
+
+        <section class="section-content">
+            <h1 class="title-main">Expériences professionnelles</h1>
+            <p class="subtitle">
+                Découvrez mes expériences : stages, alternances, freelances et projets significatifs.
+            </p>
+        </section>
+
+        <!-- Conteneur dynamique -->
+        <div id="xp-list" class="xp-list"></div>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Backend -->
+    <script src="/backend/debug.js"></script>
+    <script src="/backend/userConfig.js"></script>
+    <script src="/backend/header.js"></script>
+    <script src="/backend/footer.js"></script>
+    <script src="/backend/navigation.js"></script>
+
+    <!-- Script dynamique -->
+    <script type="module" src="./experiences.js"></script>
+
+</body>
+
+</html>

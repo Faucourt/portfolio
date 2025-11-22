@@ -1,0 +1,78 @@
+/* INDEX.CSS — Styles spécifiques à l'accueil
+   Mobile-first, léger et template-ready*/
+
+/* Accent de texte (manquant dans tes composants) */
+.text-accent {
+  color: var(--color-warm);
+  font-weight: 700;
+}
+
+/* === HERO === */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 80vh;
+  padding: 3rem 1.5rem;
+}
+
+.hero .title-main {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.hero .intro {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 680px;
+  margin: 0 auto 2rem auto;
+}
+
+.hero .buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* === À PROPOS === */
+.about p {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+/* === PROJET EN VEDETTE === */
+.section-light .card {
+  margin: 2rem auto 0;
+  max-width: 480px;
+}
+
+/* === Animation fade-in === */
+.fade-target {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition), transform 0.7s ease;
+}
+
+.fade-target.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Mobile-first === */
+@media (max-width: 600px) {
+  .hero .title-main {
+    font-size: 2rem;
+  }
+
+  .hero .intro {
+    font-size: 1rem;
+  }
+
+  .section-light .card {
+    margin-top: 1.5rem;
+  }
+}

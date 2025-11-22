@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./index.css" />
+
+    <title>Portfolio</title>
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero section-light" role="region">
+            <div class="section-content fade-target">
+                <h1 class="title-main">
+                    Bonjour, je suis <span class="text-accent" id="hero-name"></span>
+                </h1>
+                <p class="intro" id="hero-intro"></p>
+
+                <div class="buttons">
+                    <a href="./pages/projets/projets.html" class="btn btn-primary">Voir mes projets</a>
+                    <a href="./pages/competences/competences.html" class="btn btn-secondary">Mes compétences</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about section-accent" role="region">
+            <div class="section-content fade-target">
+                <h2 class="title-section">À propos</h2>
+                <p id="about-text"></p>
+            </div>
+        </section>
+
+        <!-- FEATURED PROJECT -->
+        <section class="section-light" role="region">
+            <div class="section-content fade-target">
+                <h2 class="title-section">Projet en vedette</h2>
+
+                <div class="card">
+                    <img id="featured-img" loading="lazy" />
+                    <h3 class="card-title" id="featured-title"></h3>
+                    <p class="card-text" id="featured-desc"></p>
+                    <a id="featured-link" class="btn btn-light" target="_blank">Voir sur GitHub</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Config doit être chargé AVANT header/footer/index -->
+    <script src="./backend/userConfig.js"></script>
+
+    <script src="/backend/debug.js"></script>
+    <script src="/backend/userConfig.js"></script>
+    <script src="/backend/header.js"></script>
+    <script src="/backend/footer.js"></script>
+    <script src="/backend/navigation.js"></script>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

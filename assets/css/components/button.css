@@ -1,9 +1,12 @@
-/* ==========================================
-   BOUTONS — Actions principales
-   ========================================== */
+/* BUTTONS – Boutons réutilisables
+   Variantes / tailles / accessibilité*/
 
+/* Style de base */
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
   padding: 0.6rem 1.2rem;
   border-radius: var(--radius);
   font-family: var(--font-main);
@@ -13,7 +16,15 @@
   transition: var(--transition);
 }
 
-/* Primaire — principal */
+/* Focus accessibilité */
+.btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* === Variantes === */
+
+/* Principal */
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-light);
@@ -22,7 +33,7 @@
   background-color: var(--color-secondary);
 }
 
-/* Secondaire — contrasté chaud */
+/* Contraste chaud */
 .btn-secondary {
   background-color: var(--color-warm);
   color: var(--color-light);
@@ -32,7 +43,7 @@
   color: var(--color-primary);
 }
 
-/* Clair — sur fond sombre */
+/* Bouton clair */
 .btn-light {
   background-color: var(--color-light);
   color: var(--color-primary);
@@ -42,7 +53,7 @@
   background-color: var(--color-accent);
 }
 
-/* Lien — minimal */
+/* Style lien */
 .btn-text {
   background: none;
   color: var(--color-primary);
@@ -50,4 +61,15 @@
 }
 .btn-text:hover {
   color: var(--color-warm);
+}
+
+/* === Variantes tailles === */
+.btn-sm {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+.btn-lg {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.15rem;
 }
